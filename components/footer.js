@@ -21,7 +21,7 @@ export default function Footer() {
             <img
               src="/logo/logoWhite.png"
               alt="Logo"
-              className="h-40 w-auto mr-6" // Bigger logo
+              className="h-40 w-auto mr-6"
             />
             <div>
               <div
