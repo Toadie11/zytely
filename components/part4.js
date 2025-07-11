@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 
 export default function Part4() {
@@ -33,34 +33,8 @@ export default function Part4() {
     },
   ];
 
-  const sectionRef = useRef(null);
-  const [visibleCards, setVisibleCards] = useState([false, false]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!sectionRef.current) return;
-      const rect = sectionRef.current.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        pricing.forEach((_, i) => {
-          setTimeout(() => {
-            setVisibleCards((prev) => {
-              const updated = [...prev];
-              updated[i] = true;
-              return updated;
-            });
-          }, i * 350); // 350ms delay between cards
-        });
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-    // eslint-disable-next-line
-  }, []);
-
   return (
     <section
-      ref={sectionRef}
       className="flex flex-col items-center justify-center py-16 px-4 pb-28 md:pb-60"
       style={{
         background: "var(--color-1)",
@@ -78,17 +52,7 @@ export default function Part4() {
         {pricing.map((plan, idx) => (
           <div
             key={idx}
-            className={`
-              bg-[var(--color-2)] rounded-xl shadow-lg flex flex-col items-center p-8 w-full md:w-1/2
-              hover:scale-105 transition-transform duration-300
-              transition-all duration-700
-              ${
-                visibleCards[idx]
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-[120vw]"
-              }
-            `}
-            style={{ transitionDelay: `${idx * 350}ms` }}
+            className="bg-[var(--color-2)] rounded-xl shadow-lg flex flex-col items-center p-8 w-full md:w-1/2 hover:scale-105 transition-transform duration-300"
           >
             <h3
               className="text-xl font-bold mb-6 text-center"
