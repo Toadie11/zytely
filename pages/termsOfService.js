@@ -117,7 +117,7 @@ export default function TermsOfService() {
         <br />
         <span className="font-bold">Zytely Web Studio</span>
         <br />
-        E-mail: <span className="font-bold">devtoadd@hotmail.com</span>
+        E-mail: <span className="font-bold">contact@zytely.com</span>
       </p>
     </div>
   );

@@ -89,7 +89,7 @@ export default function PrivacyPolicy() {
       </ul>
       <p className="mb-6">
         To exercise these rights, please contact us at{" "}
-        <span className="font-bold">devtoadd@hotmail.com</span>.
+        <span className="font-bold">contact@zytely.com</span>.
       </p>
       <h2
         className="text-xl font-bold mb-2"
@@ -114,7 +114,7 @@ export default function PrivacyPolicy() {
         <br />
         <span className="font-bold">Zytely Web Studio</span>
         <br />
-        E-mail: <span className="font-bold">devtoadd@hotmail.com</span>
+        E-mail: <span className="font-bold">contact@zytely.com</span>
       </p>
     </div>
   );

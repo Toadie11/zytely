@@ -80,7 +80,7 @@ export default function Footer() {
               alt="Email"
               className="h-6 w-auto mr-2"
             />
-            <span>devtoadd@hotmail.com</span>
+            <span>contact@zytely.com</span>
           </div>
         </div>
       </div>
