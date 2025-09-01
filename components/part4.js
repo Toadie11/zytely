@@ -6,35 +6,21 @@ export default function Part4() {
 
   const pricing = [
     {
-      title: "ONCE",
-      features: [
-        "Design and development",
-        "€25/month hosting",
-        "€50 per page after 5",
-        "Includes 12 months edits",
-        "24/7 support",
-      ],
-      price: "€850",
-      priceSubtext: "+ 25/month hosting",
-      button: "GET STARTED",
-    },
-    {
       title: "MONTHLY",
       features: [
         "Design and development",
         "Includes hosting",
-        "€50 per page after 5",
         "Includes lifetime edits",
         "24/7 support",
       ],
-      price: "€60",
+      price: "€30",
       priceSubtext: "per month",
       button: "GET STARTED",
     },
   ];
 
   const sectionRef = useRef(null);
-  const [visibleCards, setVisibleCards] = useState([false, false]);
+  const [visibleCards, setVisibleCards] = useState([false]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,7 +49,7 @@ export default function Part4() {
       ref={sectionRef}
       className="flex flex-col items-center justify-center py-16 px-4 pb-28 md:pb-60"
       style={{
-        background: "var(--color-1)",
+        background: "var(--color-2)",
         color: "var(--color-4)",
         fontFamily: "Montserrat, sans-serif",
       }}
@@ -74,18 +60,18 @@ export default function Part4() {
       >
         PRICING
       </h2>
-      <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl justify-center ">
+      <div className="flex justify-center w-full max-w-md">
         {pricing.map((plan, idx) => (
           <div
             key={idx}
             className={`
-              bg-[var(--color-2)] rounded-xl shadow-lg flex flex-col items-center p-8 w-full md:w-1/2
+              bg-[var(--color-1)] rounded-xl shadow-lg flex flex-col items-center p-8 w-full
               hover:scale-105 transition-transform duration-300
               transition-all duration-700
               ${
                 visibleCards[idx]
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-[120vw]"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }
             `}
             style={{ transitionDelay: `${idx * 350}ms` }}

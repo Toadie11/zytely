@@ -38,9 +38,9 @@ export default function Part1() {
             className="text-base md:text-lg mb-8 text-justify md:mr-40"
             style={{ fontFamily: "Montserrat, sans-serif" }}
           >
-            From custom-coded sites to Shopify and WordPress, we create websites
-            that bring your vision to life. Whether it’s your design or ours, we
-            build exactly what you want and handle all the maintenance for you.
+            We build custom websites, we create websites that bring your vision
+            to life. Whether it’s your design or ours, we build exactly what you
+            want and handle all the maintenance for you.
           </p>
           <button
             className="px-6 py-3 rounded-full font-bold transition w-full md:w-60 tracking-tighter hover:opacity-80"
